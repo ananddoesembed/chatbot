@@ -22,4 +22,5 @@ def getProducts(request):
 def getProduct(request,pk):
     product = Product.objects.get(_id = pk)
     serializer = ProductSerializer(product,many=False)
+    print(serializer.data)
     return Response(serializer.data)

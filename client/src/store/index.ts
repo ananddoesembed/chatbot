@@ -3,8 +3,10 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import productReducer from './product/reducer';
 import logger from 'redux-logger'
+import { cartReducer } from './cart/reducer';
 const rootReducer = combineReducers({
-    product:productReducer
+    product:productReducer,
+    cart:cartReducer
 })
 
 const middlewares = [thunk,logger]

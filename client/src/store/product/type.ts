@@ -1,6 +1,8 @@
 export const API_LOADING = 'API_LOADING'
 export const API_FAILED = 'API_FAILED'
 export const GET_ALL_PRODUCTS ='GET_ALL_PRODUCTS'
+export const GET_PRODUCT ='GET_PRODUCT'
+
 
 export interface Loading{
     type:typeof API_LOADING
@@ -14,6 +16,10 @@ export interface failed{
     type:typeof API_FAILED
     payload:boolean
 }
+export interface getProduct{
+    type:typeof GET_PRODUCT
+    payload:any
+}
 export interface ProdType {
     _id: string;
     name: string;
@@ -26,4 +32,4 @@ export interface ProdType {
     rating: number;
     numReviews: number;
   }
-export type ApiDispatchType = Loading|failed|getAllProducts
+export type ApiDispatchType = Loading|failed|getAllProducts|getProduct
